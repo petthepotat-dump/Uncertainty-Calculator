@@ -14,6 +14,8 @@ class Uncertainty:
     ):
         # abs = val
         # rel = % (rel / 100)
+        self.absu = 0.0
+        self.relu = 0.0
         self.value = value
         if abs_unc:
             self.absu = abs_unc
@@ -64,6 +66,10 @@ class Uncertainty:
 
 # ------------------------------ #
 # adding mathematical functions
+
+def pow(x: Uncertainty, val: float) -> Uncertainty:
+    """Power"""
+    return Uncertainty(x.value ** val, abs_unc=x.absu * val * x.value ** (val - 1))
 
 
 def ln(x: Uncertainty) -> Uncertainty:
