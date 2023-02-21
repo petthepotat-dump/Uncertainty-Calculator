@@ -1,6 +1,7 @@
 import math
 
 # ------------------------------ #
+pi = math.pi
 
 
 class Uncertainty:
