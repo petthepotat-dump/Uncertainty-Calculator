@@ -52,7 +52,7 @@ finput = [
 0.049 48.3
 0.047 43.2
 0.052 44.4""",
-    """0.052 49.8
+    """0.052 39.8
 0.050 35.2
 0.052 43.3
 0.048 39.5
@@ -93,5 +93,3 @@ for val, temp in mean_data:
     print(f"{lnk.value:7f}  {lnk.get_unc():.7f}    {invT:7f}")
 
 # print(f"{-mm.value:7f}    {mm.relu:.7f}")
-
-
