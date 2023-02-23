@@ -69,7 +69,9 @@ class Uncertainty:
 
 def pow(x: Uncertainty, val: float) -> Uncertainty:
     """Power"""
-    return Uncertainty(x.value ** val, abs_unc=x.absu * val * x.value ** (val - 1))
+    if type(x) == Uncertainty:
+        return Uncertainty(x.value ** val, abs_unc=x.absu * val * x.value ** (val - 1))
+    return x ** val
 
 
 def ln(x: Uncertainty) -> Uncertainty:
